@@ -1,2 +1,0 @@
-# allenhiggins.github.io
-Portfolio
