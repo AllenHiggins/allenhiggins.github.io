@@ -23,6 +23,79 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 
 /***/ }),
 
+/***/ "./src/app/aerial/aerial.component.html":
+/*!**********************************************!*\
+  !*** ./src/app/aerial/aerial.component.html ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div id=\"aerial\" >\n  <div id=\"bg\"></div>\n  <div id=\"innerbg\"></div>\n  <div id=\"displayContent\">\n    <h1>{{title}}</h1>\n    <p>{{subTitle}}</p>\n    <ul>\n      <li *ngFor=\"let image of links\">\n        <div class=\"roundContanier\"><i class=\"{{image}}\"></i></div>\n      </li>\n    </ul>\n  </div>\n  <p id=\"pageFooter\">&copy; Untitled.Design:<a href=\"https://html5up.net/\">HTML5UP</a>.</p>\n</div>\n"
+
+/***/ }),
+
+/***/ "./src/app/aerial/aerial.component.scss":
+/*!**********************************************!*\
+  !*** ./src/app/aerial/aerial.component.scss ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "#aerial {\n  background-color: #348cb2;\n  height: 100vh;\n  width: 100vw;\n  position: absolute; }\n  #aerial #pageFooter {\n    color: white;\n    opacity: 0.75;\n    bottom: 0;\n    position: fixed;\n    width: 100%;\n    text-align: center; }\n  #aerial #pageFooter a {\n      text-decoration: none;\n      color: white; }\n  #bg {\n  bottom: 0;\n  left: 0;\n  position: fixed;\n  background-image: url('bgCover.jpg');\n  background-size: 1175px auto;\n  height: 359px;\n  width: 100%;\n  background-repeat: round;\n  -webkit-animation: moveBG 59s linear infinite;\n          animation: moveBG 59s linear infinite; }\n  @-webkit-keyframes moveBG {\n  from {\n    background-position: 0 0; }\n  to {\n    background-position: -100vw 0; } }\n  @keyframes moveBG {\n  from {\n    background-position: 0 0; }\n  to {\n    background-position: -100vw 0; } }\n  #innerbg {\n  background-image: url(\"data:image/svg+xml,%3Csvg xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22 xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22 width%3D%221000px%22 height%3D%221000px%22 viewBox%3D%220 0 1000 1000%22 zoomAndPan%3D%22disable%22%3E%0D    %3Cstyle type%3D%22text%2Fcss%22%3E%3C!%5BCDATA%5B%0D%09%09line %7B%0D%09%09%09stroke%3A rgba(255%2C255%2C255%2C0.45)%3B%0D%09%09%09stroke-width%3A 0.5px%3B%0D%09%09%7D%0D%09%09%0D%09%09polygon.one %7B%0D%09%09%09fill%3A rgba(255%2C255%2C255%2C0.225)%3B%0D%09%09%7D%0D%09%09%0D%09%09polygon.two %7B%0D%09%09%09fill%3A rgba(255%2C255%2C255%2C0.15)%3B%0D%09%09%7D%0D%09%09%0D%09%09polygon.three %7B%0D%09%09%09fill%3A rgba(255%2C255%2C255%2C0.075)%3B%0D%09%09%7D%0D%09%09%0D    %5D%5D%3E%3C%2Fstyle%3E%0D%09%3Cpolygon class%3D%22one%22 points%3D%22-350%2C0 650%2C1000 0%2C1000 0%2C0%22 %2F%3E%0D%09%3Cpolygon class%3D%22two%22 points%3D%220%2C0 1000%2C1000 0%2C1000 0%2C0%22 %2F%3E%0D%09%3Cpolygon class%3D%22three%22 points%3D%22350%2C0 1350%2C1000 0%2C1000 0%2C0%22 %2F%3E%0D%09%3Cline x1%3D%22-350%22 y1%3D%220%22 x2%3D%22650%22 y2%3D%221000%22 %2F%3E%0D%09%3Cline x1%3D%220%22 y1%3D%220%22 x2%3D%221000%22 y2%3D%221000%22 %2F%3E%0D%09%3Cline x1%3D%22350%22 y1%3D%220%22 x2%3D%221350%22 y2%3D%221000%22 %2F%3E%0D%3C%2Fsvg%3E\");\n  height: 100vh;\n  position: relative;\n  background-size: cover;\n  top: 0;\n  left: 0px; }\n  #displayContent {\n  position: fixed;\n  top: 7em;\n  width: 100%;\n  height: 100vh;\n  text-align: center;\n  color: white; }\n  #displayContent h1 {\n    margin-top: 100px;\n    font-size: 65px;\n    font-family: 'Comfortaa', cursive; }\n  #displayContent P {\n    opacity: 0.75; }\n  #displayContent ul li {\n    display: inline-block;\n    width: 100px; }\n  #displayContent ul li .roundContanier {\n      border: 1px solid white;\n      width: 70px;\n      height: 70px;\n      border-radius: 180px;\n      font-size: 27px;\n      padding: 13px;\n      margin: auto;\n      position: absolute; }\n  #displayContent ul li .roundContanier:hover {\n      background-color: #ffffff45;\n      cursor: pointer;\n      -webkit-animation-name: grow;\n              animation-name: grow;\n      -webkit-animation-duration: .200s;\n              animation-duration: .200s;\n      -webkit-animation-timing-function: linear;\n              animation-timing-function: linear;\n      -webkit-animation-fill-mode: forwards;\n              animation-fill-mode: forwards;\n      -webkit-animation-direction: ease;\n              animation-direction: ease; }\n  @-webkit-keyframes grow {\n  from {\n    width: 70px;\n    height: 70px;\n    font-size: 27px;\n    margin-left: 0px;\n    margin-top: 0px; }\n  to {\n    width: 80px;\n    height: 80px;\n    font-size: 32px;\n    margin-left: -5px;\n    margin-top: -5px; } }\n  @keyframes grow {\n  from {\n    width: 70px;\n    height: 70px;\n    font-size: 27px;\n    margin-left: 0px;\n    margin-top: 0px; }\n  to {\n    width: 80px;\n    height: 80px;\n    font-size: 32px;\n    margin-left: -5px;\n    margin-top: -5px; } }\n  #displayContent ul li .roundContainerIcon {\n      margin-top: -40px;\n      margin-left: 18px;\n      width: 20px;\n      display: block;\n      font-size: 22px; }\n  /* Small devices (portrait tablets and large phones, 600px and up) */\n  @media only screen and (max-width: 600px) {\n  #bg {\n    background-size: 323px auto;\n    height: 139px; }\n  #displayContent h1 {\n    margin-top: 73px;\n    font-size: 34px; }\n  #displayContent P {\n    font-size: 12px; }\n  #displayContent ul {\n    width: 66%;\n    margin: auto;\n    margin-top: -63px; }\n    #displayContent ul li {\n      width: 88px;\n      margin-top: 79px; } }\n  /* Large devices (laptops/desktops, 992px and up) */\n  @media only screen and (min-width: 600px) and (max-width: 992px) {\n  #bg {\n    background-size: 676px auto;\n    height: 319px; } }\n  /* Large devices (laptops/desktops, 992px and up) */\n  @media only screen and (min-width: 1672px) {\n  #bg {\n    background-size: 1572px auto;\n    height: 725px; } }\n"
+
+/***/ }),
+
+/***/ "./src/app/aerial/aerial.component.ts":
+/*!********************************************!*\
+  !*** ./src/app/aerial/aerial.component.ts ***!
+  \********************************************/
+/*! exports provided: AerialComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AerialComponent", function() { return AerialComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var AerialComponent = /** @class */ (function () {
+    function AerialComponent() {
+        this.links = [];
+    }
+    AerialComponent.prototype.ngOnInit = function () {
+        this.title = 'Adam Jensen';
+        this.subTitle = 'Security Chief . Cyborg . Never asked for this';
+        this.links = [
+            'fa fa-twitter',
+            'fa fa-facebook-f',
+            'fa fa-dribbble',
+            'fa fa-github',
+            'fa fa-envelope-o'
+        ];
+    };
+    AerialComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-aerial',
+            template: __webpack_require__(/*! ./aerial.component.html */ "./src/app/aerial/aerial.component.html"),
+            styles: [__webpack_require__(/*! ./aerial.component.scss */ "./src/app/aerial/aerial.component.scss")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], AerialComponent);
+    return AerialComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/app-routing.module.ts":
 /*!***************************************!*\
   !*** ./src/app/app-routing.module.ts ***!
@@ -39,6 +112,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _app_strata_strata_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../app/strata/strata.component */ "./src/app/strata/strata.component.ts");
 /* harmony import */ var _app_notfound_notfound_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../app/notfound/notfound.component */ "./src/app/notfound/notfound.component.ts");
 /* harmony import */ var _clickmaster_clickmaster_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./clickmaster/clickmaster.component */ "./src/app/clickmaster/clickmaster.component.ts");
+/* harmony import */ var _aerial_aerial_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./aerial/aerial.component */ "./src/app/aerial/aerial.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -51,10 +125,12 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
 var appRoutes = [
     { path: '', component: _app_my_site_main_main_component__WEBPACK_IMPORTED_MODULE_2__["MainComponent"] },
     { path: 'demo/angular6/strata', component: _app_strata_strata_component__WEBPACK_IMPORTED_MODULE_3__["StrataComponent"] },
     { path: 'demo/angular6/clickmaster', component: _clickmaster_clickmaster_component__WEBPACK_IMPORTED_MODULE_5__["ClickmasterComponent"] },
+    { path: 'demo/angular6/aerial', component: _aerial_aerial_component__WEBPACK_IMPORTED_MODULE_6__["AerialComponent"] },
     { path: 'Not-Found', component: _app_notfound_notfound_component__WEBPACK_IMPORTED_MODULE_4__["NotfoundComponent"] },
     { path: '**', redirectTo: '/Not-Found' }
 ];
@@ -179,12 +255,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _clickmaster_headerclick_headerclick_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./clickmaster/headerclick/headerclick.component */ "./src/app/clickmaster/headerclick/headerclick.component.ts");
 /* harmony import */ var _clickmaster_footerclick_footerclick_component__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./clickmaster/footerclick/footerclick.component */ "./src/app/clickmaster/footerclick/footerclick.component.ts");
 /* harmony import */ var _clickmaster_photolistdisplayclick_photolistdisplayclick_component__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./clickmaster/photolistdisplayclick/photolistdisplayclick.component */ "./src/app/clickmaster/photolistdisplayclick/photolistdisplayclick.component.ts");
+/* harmony import */ var _aerial_aerial_component__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./aerial/aerial.component */ "./src/app/aerial/aerial.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -253,7 +331,8 @@ var AppModule = /** @class */ (function () {
                 _clickmaster_mainclick_mainclick_component__WEBPACK_IMPORTED_MODULE_32__["MainclickComponent"],
                 _clickmaster_headerclick_headerclick_component__WEBPACK_IMPORTED_MODULE_33__["HeaderclickComponent"],
                 _clickmaster_footerclick_footerclick_component__WEBPACK_IMPORTED_MODULE_34__["FooterclickComponent"],
-                _clickmaster_photolistdisplayclick_photolistdisplayclick_component__WEBPACK_IMPORTED_MODULE_35__["PhotolistdisplayclickComponent"]
+                _clickmaster_photolistdisplayclick_photolistdisplayclick_component__WEBPACK_IMPORTED_MODULE_35__["PhotolistdisplayclickComponent"],
+                _aerial_aerial_component__WEBPACK_IMPORTED_MODULE_36__["AerialComponent"]
             ],
             imports: [
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_17__["HttpClientModule"],
@@ -795,7 +874,7 @@ var CardService = /** @class */ (function () {
         this.cardList = [
             new _Models_Card_Model__WEBPACK_IMPORTED_MODULE_1__["Card"]('assets/images/cards/strataCover.png', 'Strata', 'demo/angular6/strata'),
             new _Models_Card_Model__WEBPACK_IMPORTED_MODULE_1__["Card"]('assets/images/cards/clickmaster.png', 'Click Master', 'demo/angular6/clickmaster'),
-            new _Models_Card_Model__WEBPACK_IMPORTED_MODULE_1__["Card"]('assets/images/cards/workingonit.gif', 'Oop\'s', '#'),
+            new _Models_Card_Model__WEBPACK_IMPORTED_MODULE_1__["Card"]('assets/images/cards/aerial.png', 'Aerial', 'demo/angular6/aerial'),
             new _Models_Card_Model__WEBPACK_IMPORTED_MODULE_1__["Card"]('assets/images/cards/workingonit.gif', 'Oop\'s', '#'),
             new _Models_Card_Model__WEBPACK_IMPORTED_MODULE_1__["Card"]('assets/images/cards/workingonit.gif', 'Oop\'s', '#'),
             new _Models_Card_Model__WEBPACK_IMPORTED_MODULE_1__["Card"]('assets/images/cards/workingonit.gif', 'Oop\'s', '#'),
