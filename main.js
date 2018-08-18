@@ -875,13 +875,17 @@ var CardService = /** @class */ (function () {
             new _Models_Card_Model__WEBPACK_IMPORTED_MODULE_1__["Card"]('assets/images/cards/strataCover.png', 'Strata', 'demo/angular6/strata'),
             new _Models_Card_Model__WEBPACK_IMPORTED_MODULE_1__["Card"]('assets/images/cards/clickmaster.png', 'Click Master', 'demo/angular6/clickmaster'),
             new _Models_Card_Model__WEBPACK_IMPORTED_MODULE_1__["Card"]('assets/images/cards/aerial.png', 'Aerial', 'demo/angular6/aerial'),
-            new _Models_Card_Model__WEBPACK_IMPORTED_MODULE_1__["Card"]('assets/images/cards/workingonit.gif', 'Oop\'s', '#'),
-            new _Models_Card_Model__WEBPACK_IMPORTED_MODULE_1__["Card"]('assets/images/cards/workingonit.gif', 'Oop\'s', '#'),
-            new _Models_Card_Model__WEBPACK_IMPORTED_MODULE_1__["Card"]('assets/images/cards/workingonit.gif', 'Oop\'s', '#'),
+            new _Models_Card_Model__WEBPACK_IMPORTED_MODULE_1__["Card"]('assets/images/cards/workingonit.gif', 'Oop\'s', '#')
+        ];
+        this.newSiteList = [
+            new _Models_Card_Model__WEBPACK_IMPORTED_MODULE_1__["Card"]('assets/images/cards/coffeemaster.png', 'Coffee Master', 'https://allenhiggins.github.io/coffeemasterSite/')
         ];
     }
     CardService.prototype.getCardList = function () {
         return this.cardList.slice();
+    };
+    CardService.prototype.getNewSiteList = function () {
+        return this.newSiteList.slice();
     };
     CardService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
@@ -1272,7 +1276,7 @@ var InterestComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<section id=\"DEMO\" class=\"latest col-sx-12\">\n  <h3 class=\"demosite\">Demo Sites</h3>\n  <p class=\"demoP\">\n      Fully responsive websites taking HTML5 web pages and converting them into Angular 6\n      applications as a simple demo of work. Technologies also include JQuery, Bootstrap,\n      Animate.css, SASS, Scrollreveal, Google Fonts and Font Awesome.\n  </p>\n  <div class=\"container-fluid\">\n    <div class=\"row\">\n      <ul>\n        <li *ngFor = \"let data of cardList\"\n          class=\"col-md-4 col-xs-12 democard\">\n          <a routerLink={{data.route}}>\n            <app-cards\n              [link]=data.imgPath\n              [title]=data.title></app-cards>\n          </a>\n        </li>\n      </ul>\n    </div>\n  </div>\n</section>\n"
+module.exports = "<section id=\"DEMO\" class=\"latest col-sx-12\">\n  <h3 class=\"demosite\">Demo Sites</h3>\n  <p class=\"demoP\">\n      Fully responsive websites taking HTML5 web pages and converting them into Angular 6\n      applications as a simple demo of work. Technologies also include JQuery, Bootstrap,\n      Animate.css, SASS, Scrollreveal, Google Fonts and Font Awesome.\n  </p>\n  <div class=\"container-fluid\">\n    <div class=\"row\">\n      <ul>\n        <li *ngFor = \"let data of cardList\"\n          class=\"col-md-4 col-xs-12 democard\">\n          <a routerLink={{data.route}}>\n            <app-cards\n              [link]=data.imgPath\n              [title]=data.title></app-cards>\n          </a>\n        </li>\n        <li *ngFor = \"let site of websites\"\n          class=\"col-md-4 col-xs-12 democard\">\n          <a href={{site.route}}>\n            <app-cards\n              [link]=site.imgPath\n              [title]=site.title></app-cards>\n          </a>\n        </li>\n      </ul>\n    </div>\n  </div>\n</section>\n"
 
 /***/ }),
 
@@ -1316,6 +1320,7 @@ var LatestworkComponent = /** @class */ (function () {
     }
     LatestworkComponent.prototype.ngOnInit = function () {
         this.cardList = this.cardService.getCardList();
+        this.websites = this.cardService.getNewSiteList();
     };
     LatestworkComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
